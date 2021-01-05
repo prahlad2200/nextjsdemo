@@ -1,0 +1,18 @@
+version: '3.4'
+
+services:
+  nextjsdemo:
+    working_dir: /app
+    command: npm run dev
+    container_name: nextjsdemo
+    image: reactdemo
+    volumes:
+      - '.:/app'
+      - '/app/node_modules'
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    environment:
+      NODE_ENV: production
+    ports:
+      - 3401:3000

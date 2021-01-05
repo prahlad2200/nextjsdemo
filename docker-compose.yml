@@ -1,0 +1,23 @@
+version: '3.4'
+
+services:
+  nextjsdemo:
+    working_dir: /app
+    command: npm run dev
+    container_name: nextjsdemo
+    image: nextjsdemo
+    volumes:
+      - '.:/app'
+      - '/app/node_modules'
+    build:
+      context: .  
+      dockerfile: ./Dockerfile
+    environment:
+      NODE_ENV: production
+    ports:
+      - 3402:3000
+    networks:
+      - nine30-api_default
+networks:
+  nine30-api_default:
+    name: nine30-api_default

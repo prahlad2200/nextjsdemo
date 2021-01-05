@@ -1,0 +1,14 @@
+.listtable{
+    background: #f3f3f3;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+.listtable tbody th{
+    font-size: 18px;
+    padding: 8px 10px;
+}
+.listtable tbody td{
+    font-size: 16px;
+    padding: 6px 10px;
+}
